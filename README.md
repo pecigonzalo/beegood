@@ -2,6 +2,8 @@
 
 > A GitHub App built with [Probot](https://github.com/probot/probot) that A good worker bee to keep do your repo work for you
 
+![Beeeeee](https://media.giphy.com/media/l4FGtoprq7U3UAgtW/giphy.gif)
+
 ## Setup
 
 ```sh
