@@ -1,12 +1,12 @@
 {
-  "name": "probot-beegood",
+  "name": "beegood",
   "version": "1.0.0",
   "description": "A good worker bee to keep do your repo work for you",
-  "author": "Gonzalo Peci <pecigonzalo@users.noreply.github.com> (https://github.com/pecigonzalo/probot-beegood)",
+  "author": "Gonzalo Peci <pecigonzalo@users.noreply.github.com> (https://github.com/pecigonzalo/beegood)",
   "license": "ISC",
-  "repository": "https://github.com//probot-beegood.git",
-  "homepage": "https://github.com//probot-beegood",
-  "bugs": "https://github.com//probot-beegood/issues",
+  "repository": "https://github.com/pecigonzalo/beegood.git",
+  "homepage": "https://github.com/pecigonzalo/beegood",
+  "bugs": "https://github.com/pecigonzalo/beegood/issues",
   "keywords": [
     "probot",
     "github",
