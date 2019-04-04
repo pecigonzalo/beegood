@@ -34,7 +34,7 @@ module.exports = (app) => {
       const reference = await context.github.gitdata.getReference({
         repo, // the repo
         owner, // the owner of the repo
-        ref: defaultBranch
+        ref: `heads/${defaultBranch}`
       })
       // Create a branch
       await context.github.gitdata.createReference({
