@@ -6,28 +6,39 @@ module.exports = (app) => {
   // this event is triggered every 1 hr
   // app.on('schedule.repository', check)
 
+
+  app.on('installation_repositories.added', check)
+
   // Opens a PR every time someone installs your app for the first time
   app.on('installation.created', check)
 
   // Check for settings
-  async function check(context) {
+  async function check(context, type) {
+
+
+    if (context.payload.repositories != undefined) {
+      repositories = context.payload.repositories
+    } else {
+      repositories = context.payload.repositories_added
+    }
+
+
     // shows all repos you've installed the app on
-    console.log(context.payload.repositories)
+    context.log.debug('repositories: ' + repositories)
+
 
     const owner = context.payload.installation.account.login
-    context.payload.repositories.forEach(async (repository) => {
+    repositories.forEach(async (repository) => {
       const repo = repository.name
       const repoInfo = await context.github.repos.get({
         owner,
         repo
       })
 
-      defaultBranch = repoInfo.data.default_branch
+      const defaultBranch = repoInfo.data.default_branch
 
       // Generates a random number to ensure the git reference isn't already taken
       // NOTE: this is not recommended and just shows an example so it can work :)
-
-      // test
       const branch = `beegood/${Math.floor(Math.random() * 9999)}`
 
       // Get current reference in Git

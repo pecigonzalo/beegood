@@ -2,12 +2,10 @@
   "action": "created",
   "installation": {
     "account": {
-      "login": "hiimbex"
+      "login": "pecigonzalo"
     }
   },
-  "repositories": [
-    {
-      "name": "testing-things"
-    }
-  ]
+  "repositories": [{
+    "name": "fakeapper"
+  }]
 }
